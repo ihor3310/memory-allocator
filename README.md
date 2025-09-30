@@ -1,9 +1,9 @@
 # Memory Allocator Project
 
 ## Team Members
-- **Member Ihor Mykhnian** — responsible for `malloc` implementation, testing.
-- **Member Mykola Chervinchuk** — responsible for `free` implementation, testing.
-- **Member Yuriy Verbivskiy** — responsible for `realloc` and `calloc` implementation, testing.
+- **Member Ihor Mykhnian** — responsible for `malloc()` implementation, testing.
+- **Member Mykola Chervinchuk** — responsible for `free()` implementation, testing.
+- **Member Yuriy Verbivskiy** — responsible for `realloc()` and `calloc()` implementation, testing.
 
 ## Project Name
 **Memory Allocator / Heap**
