@@ -11,7 +11,7 @@
 ## Short Description
 This project implements a **memory allocator** in C that mimics the functionality of standard library functions `malloc`, `free`, `realloc`, and `calloc`. 
 
-The allocator uses a **linked-list heap structure** to manage memory blocks and includes:
-- Dynamic memory allocation (`malloc`) with block splitting and alignment.
-- Memory deallocation (`free`) with coalescing and double-free protection.
+Includes:
+- Dynamic memory allocation (`malloc`) with block splitting.
+- Memory deallocation (`free`) with coalescing.
 - Memory resizing (`realloc`) and zero-initialized allocation (`calloc`).
