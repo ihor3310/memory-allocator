@@ -1,24 +1,25 @@
 <svg viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
   <rect width="1000" height="700" fill="#f8f9fa"/>
   
-
+  <!-- Title -->
   <rect x="300" y="30" width="400" height="70" fill="#2c3e50" stroke="#1a252f" stroke-width="3" rx="8"/>
   <text x="500" y="70" font-family="Arial, sans-serif" font-size="28" fill="#ecf0f1" text-anchor="middle" font-weight="bold">Memory Allocator Project</text>
   <text x="500" y="90" font-family="Arial, sans-serif" font-size="14" fill="#95a5a6" text-anchor="middle">Dynamic Memory Management System</text>
   
-
+  <!-- Team Section Header -->
   <rect x="50" y="140" width="420" height="50" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="6"/>
   <text x="260" y="172" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle" font-weight="bold">👥 Team Members & Responsibilities</text>
   
-
+  <!-- Features Section Header -->
   <rect x="530" y="140" width="420" height="50" fill="#27ae60" stroke="#229954" stroke-width="2" rx="6"/>
   <text x="740" y="172" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle" font-weight="bold">⚙️ Core Features</text>
   
-
+  <!-- Connection lines from title to sections -->
   <line x1="400" y1="100" x2="260" y2="140" stroke="#7f8c8d" stroke-width="3" stroke-dasharray="5,5"/>
   <line x1="600" y1="100" x2="740" y2="140" stroke="#7f8c8d" stroke-width="3" stroke-dasharray="5,5"/>
   
-
+  <!-- Member 1: Ihor Mykhnian -->
   <rect x="50" y="220" width="420" height="120" fill="#ffffff" stroke="#e74c3c" stroke-width="3" rx="8"/>
   <rect x="50" y="220" width="420" height="40" fill="#e74c3c" stroke="#c0392b" stroke-width="2" rx="8"/>
   <text x="260" y="247" font-family="Arial, sans-serif" font-size="18" fill="white" text-anchor="middle" font-weight="bold">Ihor Mykhnian</text>
@@ -26,8 +27,8 @@
   <text x="70" y="280" font-family="Arial, sans-serif" font-size="15" fill="#2c3e50" font-weight="bold">Responsibility:</text>
   <text x="70" y="302" font-family="Arial, sans-serif" font-size="14" fill="#34495e">• malloc() implementation</text>
   <text x="70" y="322" font-family="Arial, sans-serif" font-size="14" fill="#34495e">• Unit testing & validation</text>
-
   
+  <!-- Member 2: Mykola Chervinchuk -->
   <rect x="50" y="360" width="420" height="120" fill="#ffffff" stroke="#f39c12" stroke-width="3" rx="8"/>
   <rect x="50" y="360" width="420" height="40" fill="#f39c12" stroke="#d68910" stroke-width="2" rx="8"/>
   <text x="260" y="387" font-family="Arial, sans-serif" font-size="18" fill="white" text-anchor="middle" font-weight="bold">Mykola Chervinchuk</text>
@@ -35,8 +36,8 @@
   <text x="70" y="420" font-family="Arial, sans-serif" font-size="15" fill="#2c3e50" font-weight="bold">Responsibility:</text>
   <text x="70" y="442" font-family="Arial, sans-serif" font-size="14" fill="#34495e">• free() implementation</text>
   <text x="70" y="462" font-family="Arial, sans-serif" font-size="14" fill="#34495e">• Memory leak testing</text>
-
   
+  <!-- Member 3: Yuriy Verbivskiy -->
   <rect x="50" y="500" width="420" height="140" fill="#ffffff" stroke="#9b59b6" stroke-width="3" rx="8"/>
   <rect x="50" y="500" width="420" height="40" fill="#9b59b6" stroke="#8e44ad" stroke-width="2" rx="8"/>
   <text x="260" y="527" font-family="Arial, sans-serif" font-size="18" fill="white" text-anchor="middle" font-weight="bold">Yuriy Verbivskiy</text>
@@ -46,7 +47,7 @@
   <text x="70" y="602" font-family="Arial, sans-serif" font-size="14" fill="#34495e">• calloc() implementation</text>
   <text x="70" y="622" font-family="Arial, sans-serif" font-size="14" fill="#34495e">• Integration testing</text>
   
-
+  <!-- Feature 1: malloc() -->
   <rect x="530" y="220" width="420" height="110" fill="#ffffff" stroke="#16a085" stroke-width="3" rx="8"/>
   <rect x="530" y="220" width="420" height="40" fill="#16a085" stroke="#138d75" stroke-width="2" rx="8"/>
   <text x="740" y="247" font-family="Arial, sans-serif" font-size="18" fill="white" text-anchor="middle" font-weight="bold">malloc()</text>
@@ -55,7 +56,7 @@
   <text x="550" y="300" font-family="Arial, sans-serif" font-size="13" fill="#34495e">• Dynamic memory allocation</text>
   <text x="550" y="318" font-family="Arial, sans-serif" font-size="13" fill="#34495e">• Intelligent block splitting for efficiency</text>
   
-
+  <!-- Feature 2: free() -->
   <rect x="530" y="350" width="420" height="110" fill="#ffffff" stroke="#2ecc71" stroke-width="3" rx="8"/>
   <rect x="530" y="350" width="420" height="40" fill="#2ecc71" stroke="#27ae60" stroke-width="2" rx="8"/>
   <text x="740" y="377" font-family="Arial, sans-serif" font-size="18" fill="white" text-anchor="middle" font-weight="bold">free()</text>
@@ -64,7 +65,7 @@
   <text x="550" y="430" font-family="Arial, sans-serif" font-size="13" fill="#34495e">• Safe memory deallocation</text>
   <text x="550" y="448" font-family="Arial, sans-serif" font-size="13" fill="#34495e">• Block coalescing to prevent fragmentation</text>
   
-
+  <!-- Feature 3: realloc() -->
   <rect x="530" y="480" width="420" height="85" fill="#ffffff" stroke="#3498db" stroke-width="3" rx="8"/>
   <rect x="530" y="480" width="420" height="40" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="8"/>
   <text x="740" y="507" font-family="Arial, sans-serif" font-size="18" fill="white" text-anchor="middle" font-weight="bold">realloc()</text>
@@ -72,7 +73,7 @@
   <text x="550" y="540" font-family="Arial, sans-serif" font-size="14" fill="#2c3e50" font-weight="bold">Features:</text>
   <text x="550" y="558" font-family="Arial, sans-serif" font-size="13" fill="#34495e">• Flexible memory resizing (expand/shrink)</text>
   
-
+  <!-- Feature 4: calloc() -->
   <rect x="530" y="585" width="420" height="85" fill="#ffffff" stroke="#e67e22" stroke-width="3" rx="8"/>
   <rect x="530" y="585" width="420" height="40" fill="#e67e22" stroke="#d68910" stroke-width="2" rx="8"/>
   <text x="740" y="612" font-family="Arial, sans-serif" font-size="18" fill="white" text-anchor="middle" font-weight="bold">calloc()</text>
@@ -80,13 +81,13 @@
   <text x="550" y="645" font-family="Arial, sans-serif" font-size="14" fill="#2c3e50" font-weight="bold">Features:</text>
   <text x="550" y="663" font-family="Arial, sans-serif" font-size="13" fill="#34495e">• Zero-initialized memory allocation</text>
   
-
+  <!-- Connecting lines between members and features -->
   <line x1="470" y1="270" x2="530" y2="270" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowred)"/>
   <line x1="470" y1="410" x2="530" y2="410" stroke="#f39c12" stroke-width="2" marker-end="url(#arroworange)"/>
   <line x1="470" y1="545" x2="530" y2="530" stroke="#9b59b6" stroke-width="2" marker-end="url(#arrowpurple)"/>
   <line x1="470" y1="570" x2="530" y2="620" stroke="#9b59b6" stroke-width="2" marker-end="url(#arrowpurple2)"/>
   
-
+  <!-- Arrow markers -->
   <defs>
     <marker id="arrowred" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
       <path d="M0,0 L0,6 L9,3 z" fill="#e74c3c"/>
