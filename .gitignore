@@ -1,0 +1,12 @@
+*.o
+*.out
+*.exe
+test_free
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+build/
+bin/
