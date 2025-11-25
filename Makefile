@@ -30,5 +30,10 @@ run: $(TEST_FREE_BIN)
 
 clean:
 	rm -f $(TEST_FREE_BIN) $(TEST_CALLOC_BIN) $(TEST_REALLOC_BIN) *.o *.out
+run: $(TEST_FREE_BIN)
+	./$(TEST_FREE_BIN)
+
+clean:
+	rm -f $(TEST_FREE_BIN) *.o *.out
 
 .PHONY: all run clean
