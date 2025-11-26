@@ -1,4 +1,4 @@
-#include "../headers/malloc.h"
+#include "../include/allocator.h"
 #include <sys/mman.h>
 #include <stddef.h>
 #include <stdint.h>
@@ -25,18 +25,7 @@ static block_t *find_free_block(size_t size) {
     return NULL;
 }
 
-static void split_block(block_t *b, size_t size) {
-    if (b->size >= size + sizeof(block_t) + 8) {
-        block_t *nb = (block_t*)((char*)b + sizeof(block_t) + size);
-        nb->size = b->size - size - sizeof(block_t);
-        nb->free = 1;
-        nb->next = b->next;
-        b->next = nb;
-        b->size = size;
-    }
-}
-
-void *malloc(size_t size) {
+void *arena_malloc(size_t size) {
     if (!size) return NULL;
     size = ALIGN8(size);
 
