@@ -6,20 +6,14 @@
 #define ARENA_SIZE (1024*1024)
 #define ALIGN8(x) (((x)+7)&~(size_t)7)
 
-typedef struct block {
-    size_t size;
-    int free;
-    struct block *next;
-} block_t;
-
 static void *arena = NULL;
 static size_t arena_offset = 0;
 static block_t *head = NULL;
 
-static block_t *find_free_block(size_t size) {
+block_t *find_free_block(size_t size) {
     block_t *b = head;
     while (b) {
-        if (b->free && b->size >= size) return b;
+        if (b->is_free && b->size >= size) return b;
         b = b->next;
     }
     return NULL;
@@ -38,7 +32,7 @@ void *arena_malloc(size_t size) {
 
     block_t *b = find_free_block(size);
     if (b) {
-        b->free = 0;
+        b->is_free = 0;
         split_block(b, size);
         return (char*)b + sizeof(block_t);
     }
@@ -47,8 +41,9 @@ void *arena_malloc(size_t size) {
 
     b = (block_t*)((char*)arena + arena_offset);
     b->size = size;
-    b->free = 0;
+    b->is_free = 0;
     b->next = NULL;
+    b->prev = NULL;
     arena_offset += sizeof(block_t) + size;
 
     if (!head) head = b;
@@ -56,6 +51,7 @@ void *arena_malloc(size_t size) {
         block_t *last = head;
         while (last->next) last = last->next;
         last->next = b;
+        b->prev = last;
     }
 
     return (char*)b + sizeof(block_t);
