@@ -2,7 +2,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -std=c99 -g -Iinclude -I/opt/homebrew/include
 LIBS = -L/opt/homebrew/lib -lcunit
 
-SOURCES = src/malloc.c src/free.c src/realloc.c src/calloc.c src/utils.c
+SOURCES = src/arena_malloc.c src/free.c src/realloc.c src/calloc.c src/utils.c
 TEST_FREE = tests/test_free.c
 TEST_FREE_BIN = test_free
 
