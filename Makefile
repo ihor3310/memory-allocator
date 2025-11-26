@@ -37,4 +37,11 @@ run:
 clean:
 	rm -f $(TEST_FREE_BIN) $(TEST_CALLOC_BIN) $(TEST_REALLOC_BIN) $(TEST_MALLOC_BIN) *.o *.out
 
-.PHONY: all run clean
+leaks:
+	leaks -atExit -- ./$(TEST_MALLOC_BIN)
+	leaks -atExit -- ./$(TEST_FREE_BIN)
+	leaks -atExit -- ./$(TEST_CALLOC_BIN)
+	leaks -atExit -- ./$(TEST_REALLOC_BIN)
+
+.PHONY: all run clean leaks
+

@@ -4,6 +4,7 @@
 #include <CUnit/Basic.h>
 #include "../include/allocator.h"
 
+
 static block_t* create_test_block(size_t size, int is_free) {
     block_t *block = (block_t*)malloc(sizeof(block_t) + size);
     if (block) {
@@ -15,6 +16,7 @@ static block_t* create_test_block(size_t size, int is_free) {
     return block;
 }
 
+
 void test_basic_free(void) {
     block_t *block = create_test_block(100, 0);
     CU_ASSERT_PTR_NOT_NULL(block);
@@ -24,10 +26,12 @@ void test_basic_free(void) {
     free(block);
 }
 
+
 void test_free_null(void) {
     arena_free(NULL);
     CU_PASS("Free NULL handled correctly");
 }
+
 
 void test_coalesce_next(void) {
     block_t *b1 = create_test_block(100, 0);
@@ -38,8 +42,9 @@ void test_coalesce_next(void) {
     arena_free((void*)(b2 + 1));
     arena_free((void*)(b3 + 1));
     CU_ASSERT(b2->size > orig);
-    free(b1); free(b2);
+    free(b1); free(b2); free(b3);
 }
+
 
 void test_coalesce_prev(void) {
     block_t *b1 = create_test_block(100, 0);
@@ -49,7 +54,7 @@ void test_coalesce_prev(void) {
     arena_free((void*)(b1 + 1));
     arena_free((void*)(b2 + 1));
     CU_ASSERT(b1->size > orig);
-    free(b1);
+    free(b1); free(b2);
 }
 
 
@@ -61,6 +66,7 @@ void test_double_free(void) {
     CU_ASSERT_EQUAL(block->is_free, 1);
     free(block);
 }
+
 
 void test_memory_integrity(void) {
     block_t *blocks[10];
@@ -76,6 +82,7 @@ void test_memory_integrity(void) {
     for (int i = 0; i < 10; i++) free(blocks[i]);
 }
 
+
 void test_block_linking(void) {
     block_t *b1 = create_test_block(100, 0);
     block_t *b2 = create_test_block(200, 0);
@@ -87,6 +94,7 @@ void test_block_linking(void) {
     CU_ASSERT_PTR_EQUAL(b3->prev, b2);
     free(b1); free(b2); free(b3);
 }
+
 
 int main(void) {
     CU_pSuite pSuite = NULL;
