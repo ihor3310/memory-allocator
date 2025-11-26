@@ -4,13 +4,11 @@ LIBS = -L/opt/homebrew/lib -lcunit
 
 SOURCES = src/arena_malloc.c src/free.c src/realloc.c src/calloc.c src/utils.c
 
-# Тести
 TEST_FREE = tests/test_free.c
 TEST_CALLOC = tests/test_calloc.c
 TEST_REALLOC = tests/test_realloc.c
 TEST_MALLOC = tests/malloc_test.c
 
-# Бінарники
 TEST_FREE_BIN = test_free
 TEST_CALLOC_BIN = test_calloc
 TEST_REALLOC_BIN = test_realloc
